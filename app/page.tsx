@@ -3,12 +3,12 @@ import Cards from "./components/Cards";
 
 export default function Home() {
   return (
-    <main className="relative mt-[25vh] top-[-10%]">
+    <main className="relative mt-[25vh]">
       <h1 className="font-medium text-center uppercase text-4xl">Universities</h1>
 
       {/* <div className=""> */}
         {univ.map((univs, index) => {
-          return <Cards key={index} {...univs} />;
+          return <Cards i={index} {...univs} />;
         })}
       {/* </div> */}
     </main>

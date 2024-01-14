@@ -6,7 +6,7 @@ const univ = [
         courses :"Corporate finance in international business",
         fee : "2550/yr",
         image : "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg",
-        color : "#FA5300"
+        color : "#FEEAE0"
 
     },
     {
@@ -16,7 +16,7 @@ const univ = [
         courses :"•	Management  and marketing",
         fee : "54050/yr",
         image : "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg",
-        color : "#9700FF"
+        color : "#F9EDFF"
 
     },
     {
@@ -26,7 +26,7 @@ const univ = [
         courses :"•	The fine art and design program ",
         fee : "2550 euro",
         image : "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg",
-        color : "#FA5300"
+        color : "#FEEAE0"
 
     },
     {
@@ -36,7 +36,7 @@ const univ = [
         courses :"Building structures engineering  ",
         fee : "132,000 CZK",
         image : "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg",
-        color : "#9700FF"
+        color : "#F9EDFF"
 
     },
     {
@@ -46,7 +46,7 @@ const univ = [
         courses :"	Business administration   ",
         fee : "42000 CZK",
         image : "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg",
-        color : "#FA5300"
+        color : "#FEEAE0"
 
     },
     {
@@ -56,7 +56,7 @@ const univ = [
         courses :"Economics and management   ",
         fee : "650,000 CZK",
         image : "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg",
-        color : "#9700FF"
+        color : "#F9EDFF"
 
     },
 ]
