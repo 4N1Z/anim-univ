@@ -44,6 +44,7 @@ export default function Home() {
         const targetScale = 1 - (univ.length - index) * 0.05;
         return (
           <Cards
+          key={index}
             i={index}
             {...univs}
             progress={scrollYProgress}
