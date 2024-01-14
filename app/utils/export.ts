@@ -1,4 +1,4 @@
-export const univ = [
+const univ = [
     {
         title : "SKODA AUTO UNIVERSITY",
         desc : "Skoda Auto University is a specialized higher education institution located in Mladá   Boleslav, Czech Republic. Established in 2000, it is closely affiliated with Skoda Auto, one of the leading automobile manufacturers in Europe.",
@@ -60,3 +60,6 @@ export const univ = [
 
     },
 ]
+
+
+export {univ}
