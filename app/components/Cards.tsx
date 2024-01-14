@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { motion, useScroll } from "framer-motion";
 
 interface UnivCards {
   key: number;
@@ -22,18 +23,24 @@ const Cards: React.FC<UnivCards> = ({
   return (
     <div className="cardContainer h-[100vh] flex items-center justify-center sticky top-[0px]">
       <div
-        className={`flex max-w-[960px] max-h-[370px] justify-between gap-[3em] bg-[#f8eefe] p-2 rounded`}
+        className={`flex max-w-[960px] min-h-[370px] justify-between gap-[2em] bg-[#f8eefe] p-2 rounded`}
       >
-        <Image
-          src={image}
-          width={350}
-          height={350}
-          alt=""
-          className="object-contain rounded"
-        />
+        <div className="ImageContainer relative w-[100%] h-[100] rounded overflow-hidden">
+          <div className="innerImage overflow-clip w-full">
+            <Image
+              src={image}
+            //   width={350}
+            //   height={350}
+            fill = {true}
+              alt=""
+              className="object-cover "
+            />
+          </div>
+        </div>
+
         <div className="content flex flex-col text-ellipsis">
           <h2 className="font-semibold">{title}</h2>
-          <p className="text-gray-500 overflow-hidden h-[50%] py-2">{desc}</p>
+          <p className="text-gray-500 overflow-hidden py-2">{desc}</p>
           <p>Courses : {courses}</p>
           <p>Fee : {fee}</p>
         </div>

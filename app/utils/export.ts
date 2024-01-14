@@ -45,7 +45,7 @@ const univ = [
         intake : "February - September",
         courses :"	Business administration   ",
         fee : "42000 CZK",
-        image : "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg",
+        image : "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg",
         color : "#FA5300"
 
     },
