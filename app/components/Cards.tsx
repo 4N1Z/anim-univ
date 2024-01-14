@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 
 interface UnivCards {
   i: number;
@@ -11,6 +11,9 @@ interface UnivCards {
   fee: string;
   image: string;
   color: string;
+  targetScale : number;
+  progress: MotionValue<number>;
+  range: number[];
 }
 
 const Cards: React.FC<UnivCards> = ({
@@ -21,6 +24,9 @@ const Cards: React.FC<UnivCards> = ({
   fee,
   image,
   color,
+  targetScale,
+  progress,
+  range,
 }) => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -29,9 +35,9 @@ const Cards: React.FC<UnivCards> = ({
   });
 
   // console.log(i)
-  const scale = useTransform(scrollYProgress, [0, 1], [2, 1]);
+  const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
   const translateY = useTransform(scrollYProgress, [0, 1], [0, i * 50]);
-
+  const scale = useTransform(progress,range,[1,targetScale])
   return (
     <div
       ref={container}
@@ -40,8 +46,9 @@ const Cards: React.FC<UnivCards> = ({
       <motion.div
         style={{
           backgroundColor: color,
-          top: `calc(-5vh + ${i * 100}px)`,
+          // top: `calc(-5vh + ${i * 100}px)`,
           translateY: translateY,
+          scale
         }}
         className="flex max-w-[960px] min-h-[370px] justify-between gap-[2em] bg-[#f8eefe] p-2 rounded border-[2px] border-solid border-black top-[-25%]"
       >
