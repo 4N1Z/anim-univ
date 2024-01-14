@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Button from "./Button";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Nav from "./Nav";
 
 const menu = {
@@ -31,16 +31,15 @@ function Navbar() {
   return (
     <div className="fixed right-[50px] top-[50px]">
       <motion.div
-        className="relative w-[480px] h-[650px] bg-[#9700FF] rounded-[26px]"
+        className="relative max-w-[480px] h-fit bg-[#9700FF] rounded-[26px]"
         variants={menu}
         animate={isActive ? "open" : "closed"}
         initial="closed"
       >
-        <Nav/>
-
-
+        <AnimatePresence>
+            {isActive && <Nav />}
+        </AnimatePresence>
       </motion.div>
-
 
       <Button isActive={isActive} setIsActive={setIsActive} />
     </div>
